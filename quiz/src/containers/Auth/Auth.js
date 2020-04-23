@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import classes from './Auth.module.css';
 import Button from '../../components/UI/Button/Button';
 import Input from '../../components/UI/Input/Input';
-import is from 'is_js'
+import is from 'is_js';
 
 export default class Auth extends Component {
 
@@ -104,6 +104,7 @@ export default class Auth extends Component {
                     touched={control.touched}
                     label={control.label}
                     shouldValidate={!!control.validation}
+                    //объект всегда приводится к true, так что смысла в верхней операции немного
                     errorMessage={control.errorMessage}
                     onChange={event => this.onChangeHandler(event, controlName)}
                 />
